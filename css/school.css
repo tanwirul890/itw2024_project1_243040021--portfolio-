@@ -1,0 +1,201 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(/img/bagraund.webp);
+  }
+  .judul-utama {
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(248, 240, 248);
+    box-shadow: 0 5px 40px rgb(199, 8, 199);
+  }
+  
+  .judul1 {
+  padding-left: 20px;
+    color:black;
+    font: italic normal bold 50px verdana;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+  }
+  
+  .judul1 h1{
+      margin-top: 25px;
+  }
+  
+  
+  
+  .judul1 img{
+      width: 100px;
+      height: 100px;
+      mix-blend-mode: multiply;
+  }
+  
+  nav {
+    position: relative;
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+  }
+  
+  nav.menu {
+    margin-right: 50px;
+  }
+  
+  nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    margin-top: 15px;
+  }
+  
+  nav span {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 95px;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(62, 19, 114), purple);
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+  
+  nav a:nth-child(1):hover ~ span {
+    left: 0;
+  }
+  
+  nav a:nth-child(2):hover ~ span {
+    left: 100px;
+  }
+  
+  nav a:nth-child(3):hover ~ span {
+    left: 190px;
+  }
+  
+  nav a:nth-child(4):hover ~ span {
+    left: 289px;
+    width: 115px;
+  }
+
+  .heading{
+    font-size: 8rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+  .education{
+    padding: 100px 15px;
+    
+  }
+
+  .education h2{
+    margin-bottom: 5rem;
+  }
+
+  .timeline-items{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #700B97 ;
+    left: calc(50% - 1px);
+  }
+
+  .timeline-item{
+    margin-bottom: 40px ;
+    width: 100%;
+    position: relative;
+  }
+
+  .timeline-item:last-child{
+    margin-bottom: 0;
+  }
+  
+  .timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+  }
+
+.timeline-item:nth-child(even){
+  padding-left: calc(50% + 30px);
+  
+}
+
+.timeline-dot{
+  height: 21px;
+  width: 21px;
+  background-color: #700B97;
+  box-shadow: 0 0 25px #700B97,
+              0 0 25px #700B97,
+              0 0 25px #700B97;
+  position: absolute;
+  left: calc(49% + 4px);
+  border-radius: 50%;
+  top:10px;            
+}
+
+.timeline-dete{
+  font-size: 20px;
+  font-weight: 800;
+  margin: 6px 0 15px;
+}
+
+.timeline-content{
+  background-color: white;
+  border: 3px solid #700B97;
+  padding: 30px 50px;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px #700B97;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #700B97;
+}
+
+.timeline-content h3{
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.timeline-content{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+ ::-webkit-scrollbar-thumb{
+  background-color: #700B97;
+ }
+

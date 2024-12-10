@@ -1,0 +1,649 @@
+/* body */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(/img/bagraund.webp);
+}
+/* body */
+
+/* header */
+/* judul menu */
+.judul-utama {
+  display: flex;
+  justify-content: space-between;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(248, 240, 248);
+  box-shadow: 0 5px 40px rgb(199, 8, 199);
+}
+
+.judul1 {
+  padding-left: 20px;
+  color: black;
+  font: italic normal bold 50px verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+}
+
+.judul1 h1 {
+  margin-top: 25px;
+}
+
+.judul1 img {
+  width: 100px;
+  height: 100px;
+  mix-blend-mode: multiply;
+}
+/* akhir judul menu */
+
+/* nav bar */
+nav {
+  position: relative;
+  width: 400px;
+  height: 50px;
+  background-color: white;
+  align-items: center;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+nav.menu {
+  margin-right: 50px;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 23px;
+  z-index: 1;
+  margin-top: 15px;
+}
+
+nav span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(62, 19, 114), purple);
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+nav a:nth-child(1):hover ~ span {
+  left: 0;
+}
+
+nav a:nth-child(2):hover ~ span {
+  left: 100px;
+}
+
+nav a:nth-child(3):hover ~ span {
+  left: 190px;
+}
+
+nav a:nth-child(4):hover ~ span {
+  left: 289px;
+  width: 115px;
+}
+/* akhir navbar */
+
+/* togel */
+.judul-utama ul {
+  display: none;
+}
+.togel {
+  display: none;
+  flex-direction: column;
+  height: 28px;
+  justify-content: space-between;
+}
+
+.togel input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: auto;
+
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.togel span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: blueviolet;
+  border-radius: 3px;
+  right: 5px;
+  transition: all 0.3s;
+}
+
+.togel span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.togel span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.togel input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(1px, -5px);
+}
+
+.togel input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+
+.togel input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(8px, -5px);
+}
+
+/* akhir togel */
+/* akhir header */
+
+/* container */
+/* conten */
+section {
+  min-height: 800px;
+  padding: 10rem 12% 10rem;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+}
+
+.home-conten {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 2px 1px 5px;
+}
+
+.conten {
+  padding-top: 40px;
+}
+
+span {
+  color: black;
+}
+
+.home-conten h3 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.home-conten h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.home-conten p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 1000px;
+  text-align: justify;
+
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.text-animesion {
+  font-size: 30px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.text-animasion span {
+  position: relative;
+  color: aliceblue;
+  font-size: 40px;
+}
+
+.text-animasion span::before {
+  content: 'web developer';
+  color: #700b97;
+  animation: words 20s infinite;
+}
+
+.text-animasion span::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: calc(100% + 8px);
+  height: 100%;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+/* animasion*/
+@keyframes cursor {
+  to {
+    border-left: 2px solid black;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: 'Cyber Scurity';
+  }
+  21%,
+  40% {
+    content: 'Frontend Desiner';
+  }
+  41%,
+  60% {
+    content: 'Web Desener';
+  }
+  61%,
+  80% {
+    content: 'UI / UX Desiner';
+  }
+  81%,
+  100% {
+    content: 'Web Developer';
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
+/* akhir animasion*/
+
+/* sosial media conten */
+.sosial-media {
+  padding-left: 20px;
+  padding-bottom: -40px;
+}
+
+.sosial-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: 2px solid #700b97;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: #700b97;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.sosial-media a:hover {
+  color: white;
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 0 25px #700b97;
+  background-color: #700b97;
+}
+/* akhir sosial media */
+/* akhir conten */
+
+/* conten img*/
+.foto-saya {
+  position: relative;
+  scale: 1.2;
+  transform: translateY(-2rem);
+  animation-name: animasi;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.foto-saya img {
+  height: 350px;
+  margin-right: 100px;
+}
+
+.foto-saya img:hover {
+  transform: scale(1.3);
+}
+
+.foto-saya svg {
+  height: 500px;
+  position: absolute;
+  left: -2 -0px;
+  right: 0;
+  bottom: -100px;
+  z-index: -10;
+}
+
+@keyframes animasi {
+  0% {
+    scale: 1;
+    transform: translateY(2);
+  }
+
+  100% {
+    scale: 1;
+    transform: translateY(-3rem);
+  }
+}
+/*  akhir conten img*/
+
+/*header 2 */
+.heading {
+  font-size: 6rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* akhir header2 */
+
+/* conten 2*/
+.education {
+  padding: 100px 15px;
+}
+
+.education h2 {
+  margin-bottom: 5rem;
+}
+
+.timeline-items {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #700b97;
+  left: calc(50% - 1px);
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+  height: 21px;
+  width: 21px;
+  background-color: #700b97;
+  box-shadow: 0 0 25px #700b97, 0 0 25px #700b97, 0 0 25px #700b97;
+  position: absolute;
+  left: calc(49% + 4px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.timeline-dete {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 6px 0 15px;
+}
+
+.timeline-content {
+  background-color: white;
+  border: 3px solid #700b97;
+  padding: 30px 50px;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px #700b97;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #700b97;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+/*akhir conten 2*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #700b97;
+}
+
+/*layar tablet*/
+@media screen and (max-width: 768px) {
+  .home {
+    display: block;
+    width: 100%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /*conten*/
+  .home-conten {
+    top: 700px;
+    position: absolute;
+    width: 80%;
+    left: 20px;
+  }
+
+  .foto-saya {
+    width: 50%;
+    left: 350px;
+    top: 150px;
+    z-index: -4;
+  }
+
+  .foto-saya img {
+    left: -100px;
+    position: absolute;
+  }
+
+  .foto-saya span {
+    top: 350px;
+    left: 260px;
+    position: absolute;
+  }
+  /*akhir conten*/
+
+  /*conten 2*/
+  .timeline-dot {
+    display: none;
+  }
+
+  .timeline-items::before {
+    display: none;
+  }
+
+  #putih {
+    width: 80%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding-right: 0;
+  }
+
+  #putih2 {
+    width: 80%;
+    position: absolute;
+    top: 400px;
+    left: -330px;
+    padding-right: 0;
+  }
+
+  #putih3 {
+    width: 80%;
+    position: absolute;
+    top: 750px;
+    left: 50px;
+    padding-right: 0;
+  }
+
+  #putih4 {
+    width: 80%;
+    position: absolute;
+    top: 1100px;
+    left: -330px;
+    padding-bottom: 100px;
+    padding-right: 0;
+  }
+
+  .judul-utama {
+    width: 100%;
+  }
+
+  .education {
+    width: 100%;
+    position: relative;
+    top: 400px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .education h2 {
+    font-size: 50px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    text-align: left;
+  }
+  /*akhir conten 2*/
+
+  /*toggel*/
+  .togel {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+
+  .judul-utama ul {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: purple;
+    width: 100%;
+    top: -500px;
+    left: 0;
+    height: 1;
+    z-index: -1;
+  }
+  .togel ul li {
+    padding: 50px;
+    text-align: center;
+    border-bottom: 4px solid plum;
+    border-left: 4px solid plum;
+  }
+
+  .menu2 li:hover {
+    transition: 1s;
+    transform: scale(1.1);
+  }
+
+  .judul-utama ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .togel input:checked ~ .menu2 {
+    top: 50px;
+    transition: 1s;
+  }
+
+  .judul-utama input {
+    position: absolute;
+    left: 710px;
+    opacity: 0;
+    top: 17px;
+    margin-right: 0;
+  }
+  /*akhir toggel*/
+}
+/*akhir layar tablet*/
+
+/*ukuran mobail*/
+@media screen and (max-width: 576px) {
+  #putih2 {
+    margin-left: 80px;
+  }
+  #putih4 {
+    margin-left: 80px;
+  }
+  /*img*/
+  .foto-saya {
+    left: 300px;
+  }
+  /*akhir img*/
+  /* toggel*/
+  .togel input {
+    left: 526px;
+    margin-right: 0;
+  }
+  /*akhir toggel*/
+}
