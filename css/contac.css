@@ -1,0 +1,317 @@
+/* body */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(/img/bagraund.webp);
+  }
+  /* body */
+  /* header */
+  .judul-utama {
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    height: 70px;
+    background-color: rgb(248, 240, 248);
+    box-shadow: 0 5px 40px rgb(199, 8, 199);
+    align-items: center;
+  }
+  /* judul menu */
+  .judul1 {
+    display: flex;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    margin-left: 25px;
+  }
+  
+  .judul1 img {
+    width: 80px;
+    height: 80px;
+    mix-blend-mode: multiply
+  }
+  
+  .judul1 h1 {
+    margin-top: 15px;
+  }
+  
+  /* akhir judul menu */
+  
+  /* navbar */
+  nav {
+    position: relative;
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    width: 530px;
+    height: 50px;
+    align-content: center;
+  }
+  
+  .menu {
+    margin-left: 50%;
+  }
+  
+  nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+  }
+  
+  nav span {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 115px;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(62, 19, 114), purple);
+    border-radius: 8px;
+    transition: 0.5s;
+  }
+  
+  nav a:nth-child(1):hover ~ span {
+    left: 0;
+  }
+  
+  nav a:nth-child(2):hover ~ span {
+    width: 115px;
+    left: 100px;
+  }
+  
+  nav a:nth-child(3):hover ~ span {
+    left: 218px;
+  }
+  
+  nav a:nth-child(4):hover ~ span {
+    left: 305px;
+    width: 115px;
+  }
+  
+  nav a:nth-child(5):hover ~ span {
+    left: 415px;
+    width: 115px;
+  }
+  /* akhir navbar */
+  /*toggel*/
+  .toggel,
+  .menu2 {
+    display: none;
+  }
+  
+  .togel input {
+    opacity: 1;
+  }
+  
+  .togel {
+    display: none;
+    flex-direction: column;
+    height: 28px;
+    justify-content: space-between;
+  }
+  
+  .togel input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: auto;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .togel span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: blueviolet;
+    border-radius: 3px;
+    right: 5px;
+    transition: all 0.3s;
+  }
+  
+  .togel span:nth-child(2) {
+    transform-origin: 0 0;
+  }
+  
+  .togel span:nth-child(4) {
+    transform-origin: 0 100%;
+  }
+  
+  .togel input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(1px, -5px);
+  }
+  
+  .togel input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+  }
+  
+  .togel input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(8px, -5px);
+  }
+  
+  /* akhir togel */
+  /* akhir header */
+
+  /* conten-contac */
+
+  .conten-contac{
+    height: 800px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container {
+    width: 100%;
+    height: 70%;
+    background: #700b97;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15%;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 450px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+  @media screen and (max-width: 999px) {
+    .home {
+      display: block;
+      width: 100%;
+    }
+  
+    .menu {
+      display: none;
+    }
+  
+    /*toggel*/
+    .togel {
+      display: flex;
+    }
+  
+    .togel span {
+      margin-right: 30px;
+    }
+  
+    .menu2 {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      background-color: white;
+      top: -5000px;
+      width: 100%;
+      left: 0;
+      height: 1;
+      margin-top: 20px;
+  
+    }
+    .togel ul li {
+      padding: 50px;
+      text-align: center;
+      border-bottom: 4px solid plum;
+      border-left: 4px solid plum;
+    }
+  
+    .judul-utama ul li a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      transition: 0.8;
+    }
+  
+    .togel ul li:hover {
+      transform: scale(1.3) translateY(-5px);
+      background-color: #700b97;
+    }
+  
+    .togel input:checked ~ .menu2 {
+      top: 50px;
+      transition: 1s;
+   
+    }
+  
+    .judul-utama input {
+      position: absolute;
+      left: 91%;
+      opacity: 0;
+      top: 17px;
+      margin-right: 0;
+      z-index: 3;
+    }
+    /*akhir toggel*/
+  }
+
+
+  @media screen and (max-width: 576px) {
+    /* toggel*/
+    .togel input {
+      left: 85%;
+  
+    }
+    /*akhir toggel*/
+
+   .contact-container{
+    width: 100%;
+   justify-items: center;
+   }
+
+   .contact-form input,
+   .contact-form textarea {
+    width: 300px;
+}
+
+
+  }
+  
