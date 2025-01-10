@@ -305,8 +305,8 @@ input {
 @media screen and (max-width: 1200px) {
   .home {
     display: block;
-    width: 100%;
-    overflow-x: hidden;
+    width: 400px;
+
   }
 
 
